@@ -35,3 +35,8 @@ __pycache__/
 site
 .alma-snapshots/
 .venv/
+*.md
+*.bat
+*.xml
+*.py
+*.json
