@@ -571,6 +571,13 @@ public class JobContainer
             resultLog.put("jobName", jobName);
             resultLog.put("jobContent", userConf.getString("jobContent.internal.job"));
 
+            // Add task_instance_id from job settings if available
+            String taskInstanceId = userConf.getString(CoreConstant.JOB_SETTING_TASK_INSTANCE_ID);
+            if (StringUtils.isNotBlank(taskInstanceId)) {
+                resultLog.put("task_instance_id", taskInstanceId);
+                LOG.info("Added task_instance_id: {} to result report", taskInstanceId);
+            }
+
             String jsonStr = JSON.toJSONString(resultLog);
 
             LOG.info("The jobResultReportUrl: {}", jobResultReportUrl);

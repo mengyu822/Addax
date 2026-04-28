@@ -100,6 +100,9 @@ public class CoreConstant
 
     public static final String JOB_SETTING_ERROR_LIMIT_PERCENTAGE = "job.setting.errorLimit.percentage";
 
+    // Task instance ID for result reporting
+    public static final String JOB_SETTING_TASK_INSTANCE_ID = "job.setting.taskInstanceId";
+
     public static final String JOB_SETTING_DRY_RUN = "job.setting.dryRun";
 
     public static final String JOB_PRE_HANDLER_PLUGIN_TYPE = "job.preHandler.pluginType";
